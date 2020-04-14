@@ -1,5 +1,16 @@
 .home {
 
+// my code for header//
+header{
+  padding-bottom: 1%;
+  border-bottom: 2px dashed @navigation-border;
+
+  @media @mobile{
+// padding:4% 0 ;
+  }//end of media query for header
+} //end of header
+////
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -11,6 +22,10 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile{
+width:50%;
+      }//end of media query
     }
 
     .img-content {
@@ -20,7 +35,15 @@
       img {
         border-radius: 10px;
       }
+      @media @mobile{
+        width:50%;
+              }//end of media query
     }
+
+    @media @mobile{
+flex-direction:column;
+align-items:center;
+    }//end of @media
   }
 
   .inverse-content {
@@ -36,6 +59,10 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media @mobile{
+      flex-direction:column-reverse;
+          }//end of @media
   }
 
   .content-destination {
@@ -56,6 +83,24 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      // my code for buttons//
+      .btn{
+        .custom-btn();
+      }//end of .button//
+
+      @media @mobile{
+        width:50%;
+      }//end of @media
     }
+
+    @media @mobile{
+flex-direction:column;
+align-items:center;
+    }//end of @media
   }
+
+//   @media @mobile{
+// width:100%;
+//   }//end of media query for home
 }// home
